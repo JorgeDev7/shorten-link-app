@@ -1,0 +1,44 @@
+@use '../custom' as *;
+
+.boost {
+    background-image: url(../../assets/bg-boost-mobile.svg);
+    background-size: cover;
+    background-color: $veryDarkBlue;
+    height: auto;
+
+    @include media-breakpoint-up(md) {
+        background-image: url(../../assets/bg-boost-desktop.svg);
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 10rem;
+        padding-bottom: 10rem;
+    }
+
+    &__heading {
+        color: $white;
+        font-weight: 700;
+        padding-bottom: 2rem;
+    }
+
+    &__btn {
+        border: 0;
+        background-color: $cyan;
+        color: $white;
+        font-weight: 500;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 3.2rem;
+        padding-right: 3.2rem;
+        border-radius: 10rem;
+        transition: background-color 300ms ease;
+
+        &:hover {
+            background-color: lighten($cyan, 25%);
+        }
+    }
+}

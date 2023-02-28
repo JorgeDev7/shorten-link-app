@@ -1,0 +1,8 @@
+@use '../custom' as *;
+
+.error {
+    font-size: 1.5rem;
+    color: $red;
+    padding-top: 0.5rem;
+    font-weight: 500;
+}

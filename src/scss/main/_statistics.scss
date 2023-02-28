@@ -1,0 +1,130 @@
+@use '../custom' as *;
+
+.statistics {
+    background-color: lighten($gray, 15%);
+    padding-top: 6rem;
+    padding-bottom: 10rem;
+
+    &__heading,
+    &__text {
+        text-align: center;
+    }
+
+    &__heading {
+        font-weight: 700;
+        color: $veryDarkBlue;
+        font-size: 2.5rem;
+        padding-bottom: 1rem;
+    }
+
+    &__text {
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: auto;
+        margin-right: auto;
+        color: $grayishViolet;
+
+        @include media-breakpoint-up(md) {
+            width: 70rem;
+        }
+    }
+
+    &__grid {
+        padding-top: 7rem;
+        display: grid;
+        grid-template-columns: 1fr;
+
+        @include media-breakpoint-up(md) {
+            grid-template-columns: 1fr 2.5rem 1fr 2.5rem 1fr;
+            align-items: center;
+            padding-top: 2rem;
+        }
+    }
+
+    &__card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        background-color: $white;
+        border-radius: .5rem;
+        padding-top: 7rem;
+        padding-bottom: 2rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+
+        @include media-breakpoint-up(md) {
+            margin-left: 0;
+            margin-right: 0;
+            justify-content: flex-start;
+            padding-top: 6rem;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        .detailed-records {
+            margin-top: 8rem;
+        }
+
+        .fully-customizable {
+            margin-top: 16rem;
+        }
+    }
+
+    &__divider {
+        height: 8rem;
+        width: .8rem;
+        background-color: $cyan;
+
+        @include media-breakpoint-up(md) {
+            height: .8rem;
+            width: 100%;
+
+            &--desk-1 {
+                margin-top: 6rem;
+            }
+
+            &--desk-2 {
+                margin-top: 6rem;
+            }
+        }
+    }
+
+    &__img {
+        position: absolute;
+        top: -3.5rem;
+        padding-bottom: 2rem;
+        background-color: $veryDarkViolet;
+        width: max-content;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    &__img img {
+        width: 3.5rem;
+    }
+
+    &__content {
+        text-align: center;
+
+        @include media-breakpoint-up(md) {
+            text-align: start;
+        }
+    }
+
+    &__title {
+        color: $veryDarkViolet;
+        padding-bottom: 1rem;
+        font-weight: 700;
+        font-size: 1.8rem;
+    }
+
+    &__paragraph {
+        font-size: 1.5rem;
+        color: $grayishViolet;
+    }
+}

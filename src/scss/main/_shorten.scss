@@ -1,0 +1,178 @@
+@use '../custom' as *;
+
+.main {
+    position: relative;
+    background-color: lighten($gray, 15%);
+    z-index: 10;
+    padding-bottom: 5rem; //TODO: cambiar al finalizar la section de  ADVANCED STATISTICS
+
+    .shorten-section {
+        position: relative;
+        background-color: $veryDarkBlue;
+        border-radius: 1rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        overflow: hidden;
+        z-index: 20;
+        top: -7rem;
+
+        @include media-breakpoint-up(md) {
+            top: -8rem;
+        }
+
+        &__bg-mobile {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: -1;
+        }
+
+        &__bg-desktop {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: -1;
+        }
+
+        &__input,
+        &__btn {
+            border-radius: .5rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        &__input {
+            padding-left: 2rem;
+            color: $veryDarkViolet;
+            outline: 0;
+
+            &.active-input {
+                border: 3px solid $red;
+                color: $red;
+
+                &::placeholder {
+                    color: $red;
+                }
+            }
+        }
+
+        &__input-box {
+            @include media-breakpoint-up(md) {
+                flex: 5;
+            }
+        }
+
+        &__btn {
+            border: 0;
+            background-color: $cyan;
+            color: $white;
+            font-weight: 500;
+            transition: background-color 300ms ease;
+
+            &:hover {
+                background-color: lighten($cyan, 25%);
+            }
+
+            @include media-breakpoint-up(md) {
+                flex: 1;
+            }
+        }
+    }
+
+    .list {
+        margin-top: -5rem;
+
+        &__item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: $white;
+            border-radius: .5rem;
+            margin-bottom: 2rem;
+
+            @include media-breakpoint-up(lg) {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+
+        &__head {
+            overflow-wrap: break-word;
+            border-bottom: 1px solid $gray;
+
+            @include media-breakpoint-up(lg) {
+                border-bottom: 0;
+            }
+        }
+
+        &__link {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+
+            @include media-breakpoint-up(lg) {
+                padding-left: 3rem;
+                padding-right: 3rem;
+            }
+        }
+
+        &__body {
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+
+            @include media-breakpoint-up(lg) {
+                display: flex;
+                align-items: center;
+                gap: 2rem;
+            }
+        }
+
+        &__link-short {
+            color: $cyan;
+            padding-bottom: 1rem;
+
+            @include media-breakpoint-up(lg) {
+                padding-bottom: 0;
+            }
+        }
+
+        &__btn {
+            width: 100%;
+            border: 0;
+            background-color: $cyan;
+            color: $white;
+            font-weight: 500;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            border-radius: .5rem;
+            transition: background-color 300ms ease;
+
+            &.copied {
+                background-color: $veryDarkViolet;
+
+                &:hover {
+                    background-color: lighten($veryDarkViolet, 25%);
+                }
+            }
+
+            &:hover {
+                background-color: lighten($cyan, 25%);
+            }
+
+            @include media-breakpoint-up(lg) {
+                padding-top: .5rem;
+                padding-bottom: .5rem;
+                padding-left: 3rem;
+                padding-right: 3rem;
+            }
+        }
+    }
+}

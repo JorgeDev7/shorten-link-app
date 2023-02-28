@@ -1,0 +1,31 @@
+// Fuente 
+$font-family-base: 'Poppins', sans-serif;
+$font-size-base: 1.8rem;
+
+// Colores 
+$cyan: hsl(180, 66%, 49%);
+$darkViolet: hsl(257, 27%, 26%);
+
+$red: hsl(0, 87%, 67%);
+
+$gray: hsl(0, 0%, 75%);
+$grayishViolet: rgb(158, 154, 167);
+$veryDarkBlue: hsl(255, 11%, 22%);
+$veryDarkViolet: hsl(260, 8%, 14%);
+
+// Headings 
+$headings-margin-bottom: 0;
+
+// Paragraphs
+$paragraph-margin-bottom: 0;
+
+// Buttons
+$navbar-toggler-focus-width: 0;
+
+// Inputs
+$input-focus-border-color: 0;
+$input-focus-color: transparent;
+$input-focus-box-shadow: 0;
+
+// Importar Bootstrap
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
